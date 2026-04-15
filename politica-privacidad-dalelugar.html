@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad — DaleLugar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #1877C8;
+      --blue-light: #E6F1FB;
+      --blue-dark: #0C447C;
+      --green: #3DA832;
+      --green-light: #EAF3DE;
+      --green-dark: #27500A;
+      --gray: #F7F8FA;
+      --border: #E2E8F0;
+      --text: #1A202C;
+      --text-muted: #64748B;
+      --radius: 14px;
+    }
+
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: #FFFFFF;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--border);
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    header img {
+      height: 52px;
+      width: auto;
+    }
+
+    header .brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header .brand-name {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--blue-dark);
+      line-height: 1;
+    }
+
+    header .brand-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #EBF4FF 0%, #F0FAF0 100%);
+      padding: 56px 24px 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--green-light);
+      color: var(--green-dark);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: 99px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: clamp(28px, 5vw, 42px);
+      color: var(--blue-dark);
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .hero h1 span { color: var(--green); }
+
+    .hero p {
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    /* ── CARDS ── */
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 24px rgba(24, 119, 200, 0.08);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .icon-wrap {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .icon-blue  { background: var(--blue-light); }
+    .icon-green { background: var(--green-light); }
+    .icon-red   { background: #FCEBEB; }
+    .icon-amber { background: #FFF8E7; }
+    .icon-purple{ background: #F3F0FF; }
+
+    .card h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    .card p {
+      font-size: 14.5px;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    .card ul {
+      margin: 10px 0 0 0;
+      padding-left: 18px;
+      font-size: 14.5px;
+      color: var(--text-muted);
+    }
+
+    .card ul li { margin-bottom: 6px; }
+
+    /* Highlight text */
+    .hi { color: var(--text); font-weight: 600; }
+
+    /* Pill tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+
+    .tag {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 99px;
+    }
+    .tag-green  { background: var(--green-light); color: var(--green-dark); }
+    .tag-blue   { background: var(--blue-light); color: var(--blue-dark); }
+    .tag-red    { background: #FCEBEB; color: #A32D2D; }
+
+    /* Highlight card */
+    .card-highlight {
+      background: linear-gradient(135deg, #EBF4FF 0%, #F0FAF0 100%);
+      border: 1.5px solid #B5D4F4;
+    }
+
+    /* Location special callout */
+    .callout {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .callout-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+    .callout p {
+      font-size: 13.5px;
+      color: #92400E;
+      margin: 0;
+    }
+
+    .callout strong { color: #78350F; }
+
+    /* ── CONTACT ── */
+    .contact-card {
+      background: var(--blue-dark);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .contact-card h2 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .contact-card p { color: #B5D4F4; font-size: 14px; margin-bottom: 20px; }
+
+    .contact-card a {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 99px;
+      transition: background 0.2s;
+    }
+
+    .contact-card a:hover { background: #2d9024; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--gray);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px 16px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    footer strong { color: var(--blue-dark); }
+
+    /* SVG icon helpers */
+    svg { display: block; }
+
+    @media (max-width: 480px) {
+      .card { padding: 20px 18px; }
+      main { padding: 32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="brand">
+    <span class="brand-name">DaleLugar</span>
+    <span class="brand-sub">Política de Privacidad</span>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">🔒 Tu privacidad importa</div>
+  <h1>Tu información, bajo <span>tu control</span></h1>
+  <p>Política de privacidad vigente para la aplicación móvil DaleLugar. Última actualización: abril 2025.</p>
+</div>
+
+<!-- SECTIONS -->
+<main>
+
+  <!-- 1. Recopilación -->
+  <div class="card card-highlight">
+    <div class="card-head">
+      <div class="icon-wrap icon-blue">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </div>
+      <h2>Recopilación de datos personales</h2>
+    </div>
+    <p>Recopilamos los datos personales necesarios para que la app funcione correctamente y puedas disfrutar de todas sus funciones. Esta información nos permite <span class="hi">identificarte como usuario</span> y ofrecerte una experiencia personalizada.</p>
+  </div>
+
+  <!-- 2. Uso -->
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-wrap icon-green">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3B6D11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+        </svg>
+      </div>
+      <h2>Uso de tus datos</h2>
+    </div>
+    <p>Tus datos se utilizan <span class="hi">únicamente</span> para individualizar tu experiencia dentro de la aplicación y hacerla mejor. No los usamos para publicidad, análisis estadísticos de terceros ni ningún otro fin secundario.</p>
+    <div class="tags">
+      <span class="tag tag-green">Personalización</span>
+      <span class="tag tag-green">Mejor experiencia</span>
+      <span class="tag tag-red">Sin publicidad</span>
+      <span class="tag tag-red">Sin terceros</span>
+    </div>
+  </div>
+
+  <!-- 3. Seguridad -->
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-wrap icon-purple">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#534AB7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>
+      <h2>Seguridad y almacenamiento</h2>
+    </div>
+    <p>Tus datos se almacenan en <span class="hi">nuestra propia base de datos</span>, bajo nuestro control exclusivo. No compartimos tu información con ningún tercero bajo ninguna circunstancia.</p>
+    <div class="tags">
+      <span class="tag tag-blue">Base de datos propia</span>
+      <span class="tag tag-red">Sin compartir datos</span>
+    </div>
+  </div>
+
+  <!-- 4. Ubicación -->
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-wrap icon-amber">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+          <circle cx="12" cy="10" r="3"/>
+        </svg>
+      </div>
+      <h2>Permiso de ubicación</h2>
+    </div>
+    <p>La app solicita acceso a la ubicación de tu dispositivo para funcionar. Nos tomamos muy en serio tu privacidad al respecto:</p>
+    <ul>
+      <li>Los datos de ubicación <span class="hi">nunca se envían fuera de tu dispositivo</span>.</li>
+      <li>La función <span class="hi">"¿Dónde dejé mi auto?"</span> guarda la ubicación <span class="hi">solamente en tu teléfono</span>.</li>
+      <li>Ninguna coordenada ni dato de ubicación llega a nuestros servidores.</li>
+    </ul>
+    <div class="callout">
+      <div class="callout-icon">📍</div>
+      <p><strong>Tu ubicación es solo tuya.</strong> Procesamos la ubicación directamente en tu dispositivo. Nada sale hacia internet ni hacia nuestros servidores.</p>
+    </div>
+  </div>
+
+  <!-- 5. Cookies -->
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-wrap icon-red">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A32D2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+        </svg>
+      </div>
+      <h2>Sin cookies</h2>
+    </div>
+    <p>DaleLugar <span class="hi">no utiliza cookies</span> de ningún tipo. No hay rastreo de sesiones, cookies analíticas ni de publicidad. Cero seguimiento.</p>
+  </div>
+
+  <!-- 6. Derechos -->
+  <div class="card">
+    <div class="card-head">
+      <div class="icon-wrap icon-green">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <h2>Tus derechos como usuario</h2>
+    </div>
+    <p>Tenés control total sobre tus datos en todo momento. Podés <span class="hi">eliminar tu cuenta y todos los datos asociados</span> en cualquier momento desde la configuración de la app, sin necesidad de contactarnos.</p>
+    <div class="tags">
+      <span class="tag tag-green">Eliminar cuenta</span>
+      <span class="tag tag-green">Borrar mis datos</span>
+      <span class="tag tag-blue">En cualquier momento</span>
+    </div>
+  </div>
+
+  <!-- 7. Contacto -->
+  <div class="contact-card">
+    <h2>¿Tenés preguntas sobre tu privacidad?</h2>
+    <p>Escribinos y te respondemos a la brevedad.</p>
+    <a href="mailto:lionel05@gmail.com">✉️ &nbsp;lionel05@gmail.com</a>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <strong>DaleLugar</strong> · Todos los derechos reservados · Esta política puede actualizarse. Te notificaremos ante cualquier cambio relevante.</p>
+</footer>
+
+</body>
+</html>
